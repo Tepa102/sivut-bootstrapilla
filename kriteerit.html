@@ -11,6 +11,15 @@
 
 </head>
 <body>
+    <style>
+        /* Lisää enemmän vasemman reunan tilaa taulukolle pienillä näytöillä */
+        @media (max-width: 760px) {
+            .table-responsive {
+                margin-left: -15px;
+                margin-right: -50px;
+            }
+        }
+        </style>
     
         <header>
             <div class="container">
@@ -52,8 +61,8 @@
             <section class="bg-light text-dark  p-1 text-left">
             <div class="container">
                 <h1>Arviointikriteerit</h1>
-                <div class="container">
-                    <table class="table table-bordered table-custom table-striped">
+                <div class="container" classs="mx-auto">
+                    <table class="table table-bordered table-custom table-striped table-responsive">
                         <thead>
                             <tr>
                                 <th>Arvosana</th>
@@ -185,6 +194,7 @@
                     </table>
                 </div>
             </div>
+
             </section>
         </main>        
         
