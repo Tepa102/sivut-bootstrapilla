@@ -9,7 +9,7 @@ body {
 body::before {
     display: block;
     content: '';
-    height: 200px;
+    height: 150px;
 }
 /* Muokkaa navigointipalkin taustaväriä käyttämällä Bootstrapin väriteemoja */
 .navbar-wrapper .navbar {
@@ -19,6 +19,7 @@ body::before {
 /* Säädä "It-velhot" logon tyyliä tarvittaessa */
 .navbar-brand img {
     margin-right: 10px;
+    margin-top: -20px;
 }
 
 /* Siirrä navigointilinkit It-velhot tekstin alle ja keskelle */
@@ -26,30 +27,29 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Vasen reuna */
-    margin-top: 10px; /* Lisää hieman väliä yläreunaan */
-    font-size: larger;
+    margin-top: 5px; /* Lisää hieman väliä yläreunaan */
+    font-size: large;
     font-weight: bold;
-
 }
 
 /* Muokkaa navigointilinkkien välistä tilaa tarvittaessa */
 .navbar-nav .nav-item {
-    margin-bottom: 10px; /* Väliä linkkien välille */
-    
+    margin:10px; /* Väliä linkkien välille */
 }
+
 /* Säädä "It-velhot" tekstin tyyliä tarvittaessa */
 .navbar-brand .highlight {
     font-size: 32px;
     font-weight: bold;
     color: rgb(117, 214, 141); /* Voit muuttaa värin haluamaksesi */
-
 }
+
 .rotate {
     display: inline-block;
     transform: rotate(15deg);
     transform-origin: 0 0;
- 
 }
+
 /* Keskitä kuvan ja tekstin sisältö sivulle */
 .content-wrapper {
     display: flex;
@@ -64,10 +64,11 @@ body::before {
 .overlay-text {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     border-radius: 5px;
 }
+
 .custom-title {
     position: relative;
     padding-top: 150px; /* Lisää väliä viivan ja otsikon väliin */
@@ -82,8 +83,8 @@ body::before {
     height: 20px; /* Viivan korkeus */
     background-color: #085514; /* Viivan väri */
     content: "";
-
 }
+
 .custom-title {
     position: relative;
     padding-top: 20px; /* Lisää väliä viivan ja otsikon väliin */
@@ -99,6 +100,7 @@ body::before {
     background-color: #e20707; /* Viivan väri */
     content: "";
 }
+
 .nav-underline {
     background-color: #0c7211; /* Viivan väri */
     height: 10px; /* Viivan korkeus */
@@ -114,8 +116,9 @@ body::before {
 }
 .luettelo {
     font-size:22px;
-    
 }
+
+/* taulukon muotoilua*/
 .table-custom {
     border-collapse: collapse; /* Yhdistää solujen reunat */
 }
@@ -123,6 +126,7 @@ body::before {
 .table-custom th, .table-custom td {
     border: 2px solid black; /* Muuta reunaviivan paksuutta */
 }
+
 /* style.css */
 
 /* Mukautettu taulukon viivojen paksuus */
@@ -145,4 +149,11 @@ h2 {
 }
 h3 {
     font-weight: bold;
+}
+
+/* Media query kapeille näytöille */
+@media screen and (max-width: 800px) {
+    .navbar-nav .nav-item {
+        margin: -0.3rem; /* Pienennä välejä mobiilinäytöillä */
+    }
 }
